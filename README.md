@@ -167,7 +167,7 @@ FOR CREATE CONTACT (ALSO I CREATE NEW API FOR CREATE CONTEACT)
 
 
 FOR UPDATE 
-  i did used put method i used patch method for some field update.
+  i did not use put method i used patch method for some field update.
 
   update api:-  (patch method)     http://localhost:8080/api/contacts/2
 
