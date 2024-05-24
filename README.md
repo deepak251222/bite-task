@@ -39,7 +39,7 @@ HERE ALL API With RESPONSE CODE like  200,201
 
 
 
- For create contact 
+FOR CREATE CONTACT (ALSO I CREATE NEW API FOR CREATE CONTEACT)
  POST API :  http://localhost:8080/api/contacts/create
     
  request: - 
@@ -76,7 +76,7 @@ HERE ALL API With RESPONSE CODE like  200,201
 }
 
 
-  Geting all data for db response : -
+ GET API FOR GETTING ALL RECORDS : -
    GET  API : -  http://localhost:8080/api/contacts
     
    response : -
@@ -112,15 +112,23 @@ HERE ALL API With RESPONSE CODE like  200,201
         "deletedAt": null
     }
 ]
-   
-   API for get own detatils 
+
+ 
+ 
+ API FOR GET OWN DETATILS
 
   GET METHOD    http://localhost:8080/api/contacts/get_own_details
-   request :- {
+  
+    request :- 
+   
+   {
          "phoneNumber": "8118818157",
         "email": "deepak251222@gmail.com"
       }
-      respose :- [
+      
+      respose :- 
+      
+    [
     {
         "id": 1,
         "phoneNumber": "8118818157",
@@ -131,6 +139,7 @@ HERE ALL API With RESPONSE CODE like  200,201
         "updatedAt": "2024-05-24T12:07:31.576124",
         "deletedAt": null
     },
+    
     {
         "id": 2,
         "phoneNumber": "8118818157",
@@ -141,6 +150,7 @@ HERE ALL API With RESPONSE CODE like  200,201
         "updatedAt": "2024-05-24T12:21:04.330487",
         "deletedAt": null
     },
+    
     {
         "id": 3,
         "phoneNumber": "8118818157",
@@ -154,9 +164,8 @@ HERE ALL API With RESPONSE CODE like  200,201
 ]
 
 
-and created two api for update and delete
-
-for update i did used put method i used patch method for some field update
+FOR UPDATE 
+  i did used put method i used patch method for some field update.
 
   update api:-  (patch method)     http://localhost:8080/api/contacts/2
 
