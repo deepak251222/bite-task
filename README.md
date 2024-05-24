@@ -170,5 +170,10 @@ FOR UPDATE
   i did not use put method i used patch method for some field update.
 
   update api:-  (patch method)     http://localhost:8080/api/contacts/2
+     request:-   
+     
+     {
+            "linkPrecedence": "PRIMARY"
+    }
 
   delete api:- (Delete method)   http://localhost:8080/api/contacts/4
