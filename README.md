@@ -5,7 +5,7 @@ HERE ALL API With RESPONSE CODE like  200,201
 
   POST   http://localhost:8080/api/contacts/identify
   
-  request :-
+  Request :-
 
           {
             "phoneNumber": "8118818157",
@@ -44,7 +44,7 @@ HERE ALL API With RESPONSE CODE like  200,201
 FOR CREATE CONTACT (ALSO I CREATE NEW API FOR CREATE CONTEACT)
  POST API :  http://localhost:8080/api/contacts/create
     
- request: - 
+ Request: - 
  1.     {
           "phoneNumber": "8118818157",
           "email": "deepak251222@gmail.com"
@@ -80,7 +80,7 @@ FOR CREATE CONTACT (ALSO I CREATE NEW API FOR CREATE CONTEACT)
  GET API FOR GETTING ALL RECORDS : -
    GET  API : -  http://localhost:8080/api/contacts
     
-   response : -  
+   Response : -  
              
     [
      {
@@ -121,14 +121,14 @@ FOR CREATE CONTACT (ALSO I CREATE NEW API FOR CREATE CONTEACT)
 
   GET METHOD    http://localhost:8080/api/contacts/get_own_details
   
-    request :- 
+    Request :- 
    
      {
          "phoneNumber": "8118818157",
         "email": "deepak251222@gmail.com"
       }
       
-      respose :- 
+      Respose :- 
       
     [
     {
@@ -163,14 +163,15 @@ FOR CREATE CONTACT (ALSO I CREATE NEW API FOR CREATE CONTEACT)
         "updatedAt": "2024-05-24T12:42:00.316261",
         "deletedAt": null
     }
-]
+    ]
 
 
 FOR UPDATE 
   i did not use put method i used patch method for some field update.
 
   update api:-  (patch method)     http://localhost:8080/api/contacts/2
-     request:-   
+    
+     Request:-   
      
      {
             "linkPrecedence": "PRIMARY"
