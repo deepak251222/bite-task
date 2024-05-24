@@ -6,13 +6,15 @@ HERE ALL API With RESPONSE CODE like  200,201
   POST   http://localhost:8080/api/contacts/identify
   
   request :-
+
           {
             "phoneNumber": "8118818157",
            "email": "deepak251222@gmail.com"
            }
 
-   Response:-
-  {
+   Response :-
+
+    {
     "primaryContactId": 1,
     "emails": [
         "deepak251222@gmail.com",
@@ -34,7 +36,7 @@ HERE ALL API With RESPONSE CODE like  200,201
         4,
         6
     ]
-}
+    }
 
 
 
@@ -43,45 +45,45 @@ FOR CREATE CONTACT (ALSO I CREATE NEW API FOR CREATE CONTEACT)
  POST API :  http://localhost:8080/api/contacts/create
     
  request: - 
-   1.     {
-       "phoneNumber": "8118818157",
-      "email": "deepak251222@gmail.com"
-     }
-   2.
-       {
-       "phoneNumber": "8118818157",
-      "email": "abc@gmail.com.com"
-     }
+ 1.     {
+          "phoneNumber": "8118818157",
+          "email": "deepak251222@gmail.com"
+        }
+   2.      {
+          "phoneNumber": "8118818157",
+          "email": "abc@gmail.com.com"
+          }
 
  Response : - 
-  1.  {
-    "id": 1,
-    "phoneNumber": "8118818157",
-    "email": "deepak251222@gmail.com",
-    "linkedId": null,
-    "linkPrecedence": "PRIMARY",
-    "createdAt": "2024-05-24T10:43:47.8515379",
-    "updatedAt": "2024-05-24T10:43:47.8515379",
-    "deletedAt": null
-  }
-  2.  {
-    "id": 2,
-    "phoneNumber": "8118818157",
-    "email": "abc@gmail.com",
-    "linkedId": 1,
-    "linkPrecedence": "SECONDARY",
-    "createdAt": "2024-05-24T10:45:47.8515379",
-    "updatedAt": "2024-05-24T10:45:47.8515379",
-    "deletedAt": null
-}
+  1.     {
+         "id": 1,
+         "phoneNumber": "8118818157",
+         "email": "deepak251222@gmail.com",
+         "linkedId": null,
+         "linkPrecedence": "PRIMARY",
+         "createdAt": "2024-05-24T10:43:47.8515379",
+         "updatedAt": "2024-05-24T10:43:47.8515379",
+         "deletedAt": null
+         }
+  2.     {
+          "id": 2,
+         "phoneNumber": "8118818157",
+         "email": "abc@gmail.com",
+         "linkedId": 1,
+         "linkPrecedence": "SECONDARY",
+         "createdAt": "2024-05-24T10:45:47.8515379",
+         "updatedAt": "2024-05-24T10:45:47.8515379",
+         "deletedAt": null
+         }
 
 
  GET API FOR GETTING ALL RECORDS : -
    GET  API : -  http://localhost:8080/api/contacts
     
-   response : -
-   [
-    {
+   response : -  
+             
+    [
+     {
         "id": 1,
         "phoneNumber": "123456",
         "email": "deepak251222@gmail.com",
@@ -111,7 +113,7 @@ FOR CREATE CONTACT (ALSO I CREATE NEW API FOR CREATE CONTEACT)
         "updatedAt": "2024-05-24T10:41:57.194247",
         "deletedAt": null
     }
-]
+    ]
 
  
  
@@ -121,7 +123,7 @@ FOR CREATE CONTACT (ALSO I CREATE NEW API FOR CREATE CONTEACT)
   
     request :- 
    
-   {
+     {
          "phoneNumber": "8118818157",
         "email": "deepak251222@gmail.com"
       }
