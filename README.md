@@ -3,10 +3,11 @@ HERE ALL API With RESPONSE CODE like  200,201
    
   Identify API  (base on documents conditions like if data is not present it will create new record and retruning data like below Response)
 
-Live url:-
-    POST   68.178.172.87:8888/api/contacts/identify
-  
-  POST   http://localhost:8080/api/contacts/identify
+
+    POST   localhost:8080/api/contacts/identify
+    
+  Live url:-
+  POST  68.178.172.87:8888/api/contacts/identify
   
   Request :-
 
