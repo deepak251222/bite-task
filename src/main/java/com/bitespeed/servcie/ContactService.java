@@ -19,7 +19,7 @@ public class ContactService {
         this.contactRepository = contactRepository;
     }
  // for identify api
-    public ContactResponse getContactResponse(Contact contactReq) {
+   public ContactResponse getContactResponse(Contact contactReq) {
         List<Contact> contacts=contactRepository.findByPhoneNumberOrEmail(contactReq.getPhoneNumber(),contactReq.getEmail());
         if (contacts.isEmpty()){
             contactReq.setCreatedAt(LocalDateTime.now());
@@ -27,10 +27,22 @@ public class ContactService {
             contactReq.setLinkPrecedence(LinkPrecedence.PRIMARY);
             Contact contact=contactRepository.save(contactReq);
             contacts.add(contact);
+        }else{
+            Integer primaryID = contacts.stream()
+                    .filter(contact -> contact.getLinkPrecedence() == LinkPrecedence.PRIMARY)
+                    .map(Contact::getId)
+                    .findFirst()
+                    .orElse(null);
+            contactReq.setLinkedId(primaryID);
+            contactReq.setCreatedAt(LocalDateTime.now());
+            contactReq.setUpdatedAt(LocalDateTime.now());// just for fill data
+            contactReq.setLinkPrecedence(LinkPrecedence.SECONDARY);
+            Contact contact=contactRepository.save(contactReq);
+            contacts.add(contact);
         }
         List<Contact> sortedContacts = contacts.stream()
                 .sorted(Comparator.comparing(contact -> contact.getLinkPrecedence() == LinkPrecedence.PRIMARY ? 0 : 1))
-                .collect(Collectors.toList());
+                .toList();
 
         List<String> emails = sortedContacts.stream()
                 .map(Contact::getEmail)
